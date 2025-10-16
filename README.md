@@ -73,3 +73,33 @@ pnpm start
 
 Optimized for Vercel (includes `@vercel/analytics`). Any platform supporting Node.js can run it via `pnpm build && pnpm start`.
 # xendify-lp
+
+## Localization (next-intl)
+
+This app is localized with next-intl using locale-aware routes under `/[locale]`.
+
+- Supported locales: `en` and `id`
+- Messages live in `messages/en.json` and `messages/id.json`
+- Middleware (`middleware.ts`) adds `en` as default and prefixes paths as-needed
+- Root path `/` redirects to `/en`
+- Header includes a language dropdown that preserves the current route when switching
+
+Using translations in a component:
+
+1. Add strings in the right namespace in both JSON files.
+2. In the component:
+
+```tsx
+import {useTranslations} from 'next-intl';
+
+export function Example() {
+  const t = useTranslations('Namespace');
+  return <h1>{t('key')}</h1>;
+}
+```
+
+Add a new locale:
+
+1. Create `messages/<locale>.json`
+2. Update `locales` in `middleware.ts` and supported list in `components/locale-switcher.tsx`
+3. Optionally set `defaultLocale` in middleware

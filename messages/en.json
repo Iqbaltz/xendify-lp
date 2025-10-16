@@ -1,0 +1,101 @@
+{
+  "Header": {
+    "brand": "Xendify",
+    "nav": {
+      "features": "Features",
+      "dashboard": "Dashboard",
+      "contact": "Contact"
+    },
+    "cta": "Get Started"
+  },
+  "Hero": {
+    "title": "Transform Your WhatsApp Customer Service with",
+    "titleHighlight": "AI Automation",
+    "subtitle": "Streamline your business communications with our intelligent WhatsApp bot that manages chats, organizes contacts, and automates sales follow-ups—all while maintaining a personal touch.",
+    "primary": "Start Free Trial",
+    "secondary": "Watch Demo",
+    "features": {
+      "aiTitle": "AI-Powered Responses",
+      "aiDesc": "Intelligent responses that understand context and provide helpful solutions",
+      "chatTitle": "Chat Management",
+      "chatDesc": "Organize and prioritize conversations for maximum efficiency",
+      "contactTitle": "Contact Organization",
+      "contactDesc": "Smart contact management with automated tagging and segmentation"
+    }
+  },
+  "Features": {
+    "heading": "Everything You Need to Scale Your Customer Service",
+    "subheading": "Our comprehensive WhatsApp AI solution handles every aspect of customer communication, from initial contact to sales conversion.",
+    "items": {
+      "autoChat": {
+        "title": "Automated Chat Management",
+        "desc": "Handle multiple conversations simultaneously with intelligent routing and priority management."
+      },
+      "support": {
+        "title": "24/7 Customer Support",
+        "desc": "Provide round-the-clock assistance with AI responses that never sleep."
+      },
+      "followup": {
+        "title": "Sales Follow-up Automation",
+        "desc": "Automatically nurture leads and follow up on sales opportunities at the perfect time."
+      },
+      "instant": {
+        "title": "Instant Response Times",
+        "desc": "Respond to customer inquiries in seconds, not hours, improving satisfaction rates."
+      },
+      "secure": {
+        "title": "Secure & Compliant",
+        "desc": "Enterprise-grade security with full compliance to data protection regulations."
+      },
+      "analytics": {
+        "title": "Analytics & Insights",
+        "desc": "Track performance metrics and gain insights into customer behavior and preferences."
+      }
+    }
+  },
+  "CTA": {
+    "heading": "Ready to Transform Your Customer Service?",
+    "badge": "Starting from $1000 (one-time payment)",
+    "desc": "For a flat, one-time fee, get your own AI assistant tailored to your business. Join hundreds of teams improving satisfaction and boosting conversions.",
+    "primary": "Schedule Free Demo",
+    "secondary": "Start Free Trial",
+    "cards": {
+      "email": {
+        "title": "Email Integration",
+        "desc": "Get in touch for custom WhatsApp AI integration for your business",
+        "cta": "Contact Sales"
+      },
+      "phone": {
+        "title": "Phone Consultation",
+        "desc": "Schedule a call to discuss your specific customer service needs",
+        "cta": "Book Call"
+      }
+    }
+  },
+  "Footer": {
+    "tagline": "Transforming business communications with intelligent WhatsApp automation.",
+    "product": "Product",
+    "company": "Company",
+    "support": "Support",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "api": "API",
+      "integrations": "Integrations",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "help": "Help Center",
+      "docs": "Documentation",
+      "status": "Status",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": "© 2025 Xendify. All rights reserved."
+  },
+  "Common": {
+    "language": "Language",
+    "english": "English",
+    "indonesian": "Bahasa Indonesia"
+  }
+}

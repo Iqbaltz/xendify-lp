@@ -1,0 +1,101 @@
+{
+  "Header": {
+    "brand": "Xendify",
+    "nav": {
+      "features": "Fitur",
+      "dashboard": "Dasbor",
+      "contact": "Kontak"
+    },
+    "cta": "Mulai Sekarang"
+  },
+  "Hero": {
+    "title": "Ubah Layanan Pelanggan WhatsApp Anda dengan",
+    "titleHighlight": "Automasi AI",
+    "subtitle": "Permudah komunikasi bisnis Anda dengan bot WhatsApp cerdas yang mengelola chat, mengatur kontak, dan mengotomatisasi follow-up penjualan—tetap terasa personal.",
+    "primary": "Mulai Uji Coba",
+    "secondary": "Tonton Demo",
+    "features": {
+      "aiTitle": "Respons Bertenaga AI",
+      "aiDesc": "Respons cerdas yang memahami konteks dan memberi solusi yang membantu",
+      "chatTitle": "Manajemen Chat",
+      "chatDesc": "Atur dan prioritaskan percakapan untuk efisiensi maksimal",
+      "contactTitle": "Pengelolaan Kontak",
+      "contactDesc": "Manajemen kontak cerdas dengan penandaan dan segmentasi otomatis"
+    }
+  },
+  "Features": {
+    "heading": "Semua yang Anda Butuhkan untuk Menskalakan Layanan Pelanggan",
+    "subheading": "Solusi AI WhatsApp kami yang lengkap menangani seluruh komunikasi pelanggan, dari kontak awal hingga konversi penjualan.",
+    "items": {
+      "autoChat": {
+        "title": "Manajemen Chat Otomatis",
+        "desc": "Tangani banyak percakapan sekaligus dengan routing cerdas dan manajemen prioritas."
+      },
+      "support": {
+        "title": "Dukungan 24/7",
+        "desc": "Beri bantuan sepanjang waktu dengan respons AI yang tidak pernah tidur."
+      },
+      "followup": {
+        "title": "Otomasi Follow-up Penjualan",
+        "desc": "Secara otomatis membina prospek dan menindaklanjuti peluang pada waktu yang tepat."
+      },
+      "instant": {
+        "title": "Respons Instan",
+        "desc": "Balas pertanyaan pelanggan dalam hitungan detik, bukan jam, meningkatkan kepuasan."
+      },
+      "secure": {
+        "title": "Aman & Patuhi Regulasi",
+        "desc": "Keamanan tingkat perusahaan dengan kepatuhan penuh pada regulasi perlindungan data."
+      },
+      "analytics": {
+        "title": "Analitik & Insight",
+        "desc": "Lacak metrik kinerja dan dapatkan insight perilaku serta preferensi pelanggan."
+      }
+    }
+  },
+  "CTA": {
+    "heading": "Siap Mengubah Layanan Pelanggan Anda?",
+    "badge": "Mulai dari $1000 (sekali bayar)",
+    "desc": "Dengan biaya tetap satu kali, dapatkan asisten AI khusus untuk bisnis Anda. Bergabunglah dengan ratusan tim yang meningkatkan kepuasan dan konversi.",
+    "primary": "Jadwalkan Demo Gratis",
+    "secondary": "Mulai Uji Coba",
+    "cards": {
+      "email": {
+        "title": "Integrasi Email",
+        "desc": "Hubungi kami untuk integrasi AI WhatsApp kustom untuk bisnis Anda",
+        "cta": "Hubungi Penjualan"
+      },
+      "phone": {
+        "title": "Konsultasi Telepon",
+        "desc": "Jadwalkan panggilan untuk membahas kebutuhan layanan pelanggan Anda",
+        "cta": "Pesan Panggilan"
+      }
+    }
+  },
+  "Footer": {
+    "tagline": "Mengubah komunikasi bisnis dengan automasi WhatsApp cerdas.",
+    "product": "Produk",
+    "company": "Perusahaan",
+    "support": "Dukungan",
+    "links": {
+      "features": "Fitur",
+      "pricing": "Harga",
+      "api": "API",
+      "integrations": "Integrasi",
+      "about": "Tentang",
+      "blog": "Blog",
+      "careers": "Karier",
+      "contact": "Kontak",
+      "help": "Pusat Bantuan",
+      "docs": "Dokumentasi",
+      "status": "Status",
+      "privacy": "Kebijakan Privasi"
+    },
+    "copyright": "© 2025 Xendify. Hak cipta dilindungi."
+  },
+  "Common": {
+    "language": "Bahasa",
+    "english": "Inggris",
+    "indonesian": "Bahasa Indonesia"
+  }
+}

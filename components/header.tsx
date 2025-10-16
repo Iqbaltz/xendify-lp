@@ -8,8 +8,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MessageCircle, Menu } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { LocaleSwitcher } from "./locale-switcher";
 
 export function Header() {
+  const t = useTranslations("Header");
   return (
     <header className="top-0 z-50 sticky bg-background/95 supports-[backdrop-filter]:bg-background/60 backdrop-blur border-b border-border w-full">
       <div className="flex justify-between items-center mx-auto px-4 h-16 container">
@@ -22,7 +25,7 @@ export function Header() {
               className="w-6 h-6"
             />
           </div>
-          <span className="font-bold text-foreground text-xl">Xendify</span>
+          <span className="font-bold text-foreground text-xl">{t("brand")}</span>
         </div>
 
         {/* Desktop Nav */}
@@ -30,17 +33,13 @@ export function Header() {
           <NavigationMenu viewport={false}>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#features">
-                  Features
-                </NavigationMenuLink>
+                <NavigationMenuLink href="#features">{t("nav.features")}</NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#dashboard">
-                  Dashboard
-                </NavigationMenuLink>
+                <NavigationMenuLink href="#dashboard">{t("nav.dashboard")}</NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#contact">Contact</NavigationMenuLink>
+                <NavigationMenuLink href="#contact">{t("nav.contact")}</NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -49,8 +48,9 @@ export function Header() {
         {/* Right actions */}
         <div className="flex items-center gap-2">
           <ThemeToggle />
+          <LocaleSwitcher />
           <Button className="hidden md:inline-flex bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-            Get Started
+            {t("cta")}
           </Button>
 
           {/* Mobile menu */}
@@ -64,16 +64,16 @@ export function Header() {
               <SheetContent side="right" className="w-72">
                 <nav className="gap-2 grid mt-6">
                   <Button asChild variant="ghost" className="justify-start">
-                    <a href="#features">Features</a>
+                    <a href="#features">{t("nav.features")}</a>
                   </Button>
                   <Button asChild variant="ghost" className="justify-start">
-                    <a href="#dashboard">Dashboard</a>
+                    <a href="#dashboard">{t("nav.dashboard")}</a>
                   </Button>
                   <Button asChild variant="ghost" className="justify-start">
-                    <a href="#contact">Contact</a>
+                    <a href="#contact">{t("nav.contact")}</a>
                   </Button>
                   <Button className="bg-secondary hover:bg-secondary/90 mt-2 text-secondary-foreground">
-                    Get Started
+                    {t("cta")}
                   </Button>
                 </nav>
               </SheetContent>

@@ -13,58 +13,29 @@ import {
   Shield,
   BarChart3,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function FeaturesSection() {
+  const t = useTranslations("Features");
   const features = [
     {
       icon: CheckCircle,
-      title: "Automated Chat Management",
-      description:
-        "Handle multiple conversations simultaneously with intelligent routing and priority management.",
+      titleKey: "items.autoChat.title",
+      descKey: "items.autoChat.desc",
     },
-    {
-      icon: Clock,
-      title: "24/7 Customer Support",
-      description:
-        "Provide round-the-clock assistance with AI responses that never sleep.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Sales Follow-up Automation",
-      description:
-        "Automatically nurture leads and follow up on sales opportunities at the perfect time.",
-    },
-    {
-      icon: Zap,
-      title: "Instant Response Times",
-      description:
-        "Respond to customer inquiries in seconds, not hours, improving satisfaction rates.",
-    },
-    {
-      icon: Shield,
-      title: "Secure & Compliant",
-      description:
-        "Enterprise-grade security with full compliance to data protection regulations.",
-    },
-    {
-      icon: BarChart3,
-      title: "Analytics & Insights",
-      description:
-        "Track performance metrics and gain insights into customer behavior and preferences.",
-    },
+    { icon: Clock, titleKey: "items.support.title", descKey: "items.support.desc" },
+    { icon: TrendingUp, titleKey: "items.followup.title", descKey: "items.followup.desc" },
+    { icon: Zap, titleKey: "items.instant.title", descKey: "items.instant.desc" },
+    { icon: Shield, titleKey: "items.secure.title", descKey: "items.secure.desc" },
+    { icon: BarChart3, titleKey: "items.analytics.title", descKey: "items.analytics.desc" },
   ];
 
   return (
     <section id="features" className="bg-muted/30 dark:bg-muted/20 px-4 py-20">
       <div className="mx-auto max-w-6xl container">
         <div className="space-y-4 mb-16 text-center">
-          <h2 className="font-bold text-foreground text-3xl md:text-4xl">
-            Everything You Need to Scale Your Customer Service
-          </h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground text-lg">
-            Our comprehensive WhatsApp AI solution handles every aspect of
-            customer communication, from initial contact to sales conversion.
-          </p>
+          <h2 className="font-bold text-foreground text-3xl md:text-4xl">{t("heading")}</h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground text-lg">{t("subheading")}</p>
         </div>
 
         <div className="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -78,12 +49,12 @@ export function FeaturesSection() {
                   <feature.icon className="w-6 h-6 text-secondary" />
                 </div>
                 <CardTitle className="text-card-foreground">
-                  {feature.title}
+                  {t(feature.titleKey as any)}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground">
-                  {feature.description}
+                  {t(feature.descKey as any)}
                 </CardDescription>
               </CardContent>
             </Card>

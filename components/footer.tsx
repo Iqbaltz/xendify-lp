@@ -1,7 +1,9 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer className="bg-muted/30 dark:bg-muted/20 px-4 py-12 border-t border-border">
       <div className="mx-auto max-w-6xl container">
@@ -17,14 +19,11 @@ export function Footer() {
               </div>
               <span className="font-bold text-foreground text-lg">Xendify</span>
             </div>
-            <p className="text-muted-foreground text-sm">
-              Transforming business communications with intelligent WhatsApp
-              automation.
-            </p>
+            <p className="text-muted-foreground text-sm">{t("tagline")}</p>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Product</h4>
+            <h4 className="font-semibold text-foreground">{t("product")}</h4>
             <ul className="space-y-2">
               <li>
                 <Button
@@ -32,7 +31,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#features">Features</a>
+                  <a href="#features">{t("links.features")}</a>
                 </Button>
               </li>
               <li>
@@ -41,7 +40,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#contact">Pricing</a>
+                  <a href="#contact">{t("links.pricing")}</a>
                 </Button>
               </li>
               <li>
@@ -50,7 +49,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">API</a>
+                  <a href="#">{t("links.api")}</a>
                 </Button>
               </li>
               <li>
@@ -59,14 +58,14 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">Integrations</a>
+                  <a href="#">{t("links.integrations")}</a>
                 </Button>
               </li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Company</h4>
+            <h4 className="font-semibold text-foreground">{t("company")}</h4>
             <ul className="space-y-2">
               <li>
                 <Button
@@ -74,7 +73,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">About</a>
+                  <a href="#">{t("links.about")}</a>
                 </Button>
               </li>
               <li>
@@ -83,7 +82,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">Blog</a>
+                  <a href="#">{t("links.blog")}</a>
                 </Button>
               </li>
               <li>
@@ -92,7 +91,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">Careers</a>
+                  <a href="#">{t("links.careers")}</a>
                 </Button>
               </li>
               <li>
@@ -101,14 +100,14 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#contact">Contact</a>
+                  <a href="#contact">{t("links.contact")}</a>
                 </Button>
               </li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Support</h4>
+            <h4 className="font-semibold text-foreground">{t("support")}</h4>
             <ul className="space-y-2">
               <li>
                 <Button
@@ -116,7 +115,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">Help Center</a>
+                  <a href="#">{t("links.help")}</a>
                 </Button>
               </li>
               <li>
@@ -125,7 +124,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">Documentation</a>
+                  <a href="#">{t("links.docs")}</a>
                 </Button>
               </li>
               <li>
@@ -134,7 +133,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">Status</a>
+                  <a href="#">{t("links.status")}</a>
                 </Button>
               </li>
               <li>
@@ -143,7 +142,7 @@ export function Footer() {
                   variant="ghost"
                   className="justify-start px-0 h-auto text-muted-foreground hover:text-foreground text-sm"
                 >
-                  <a href="#">Privacy Policy</a>
+                  <a href="#">{t("links.privacy")}</a>
                 </Button>
               </li>
             </ul>
@@ -151,9 +150,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-muted-foreground text-sm">
-            © 2025 Xendify. All rights reserved.
-          </p>
+          <p className="text-muted-foreground text-sm">{t("copyright")}</p>
         </div>
       </div>
     </footer>

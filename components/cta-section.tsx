@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Mail, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function CTASection() {
+  const t = useTranslations("CTA");
   return (
     <section id="contact" className="relative px-4 py-24 overflow-hidden">
       {/* Background accents for glass/Apple style */}
@@ -28,22 +30,16 @@ export function CTASection() {
         {/* Glass panel */}
         <div className="bg-white/60 supports-[backdrop-filter]:bg-white/10 dark:bg-black/30 shadow-xl backdrop-blur-2xl mx-auto p-10 border border-white/30 dark:border-white/10 rounded-3xl ring-1 ring-black/5 dark:ring-white/10 max-w-4xl text-center">
           <div className="space-y-6">
-            <h2 className="font-bold text-foreground text-3xl md:text-4xl text-balance">
-              Ready to Transform Your Customer Service?
-            </h2>
+            <h2 className="font-bold text-foreground text-3xl md:text-4xl text-balance">{t("heading")}</h2>
             <div className="flex justify-center items-center">
               <Badge
                 variant="secondary"
                 className="bg-white/30 dark:bg-secondary/10 shadow-sm backdrop-blur-sm ring-1 ring-secondary/20 ring-inset text-secondary dark:text-foreground"
               >
-                Starting from $1000 (one-time payment)
+                {t("badge")}
               </Badge>
             </div>
-            <p className="mx-auto max-w-2xl text-muted-foreground text-lg text-pretty">
-              For a flat, one-time fee, get your own AI assistant tailored to
-              your business. Join hundreds of teams improving satisfaction and
-              boosting conversions.
-            </p>
+            <p className="mx-auto max-w-2xl text-muted-foreground text-lg text-pretty">{t("desc")}</p>
 
             <div className="flex sm:flex-row flex-col justify-center gap-4 pt-4">
               <Button
@@ -51,7 +47,7 @@ export function CTASection() {
                 variant="secondary"
                 className="bg-secondary hover:bg-secondary/90 shadow-sm text-secondary-foreground"
               >
-                Schedule Free Demo
+                {t("primary")}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <Button
@@ -59,7 +55,7 @@ export function CTASection() {
                 variant="outline"
                 className="bg-white/20 hover:bg-white/30 dark:bg-white/5 dark:hover:bg-white/10 backdrop-blur-sm border-white/30 dark:border-white/10 text-foreground"
               >
-                Start Free Trial
+                {t("secondary")}
               </Button>
             </div>
           </div>
@@ -69,17 +65,14 @@ export function CTASection() {
             <Card className="bg-white/20 dark:bg-white/5 backdrop-blur-sm border-white/20 dark:border-white/10">
               <CardContent className="p-6 text-foreground text-center">
                 <Mail className="mx-auto mb-3 w-8 h-8 text-secondary" />
-                <h3 className="mb-2 font-semibold">Email Integration</h3>
-                <p className="mb-4 text-muted-foreground text-sm">
-                  Get in touch for custom WhatsApp AI integration for your
-                  business
-                </p>
+                <h3 className="mb-2 font-semibold">{t("cards.email.title")}</h3>
+                <p className="mb-4 text-muted-foreground text-sm">{t("cards.email.desc")}</p>
                 <Button
                   variant="outline"
                   size="sm"
                   className="bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 border-white/30 dark:border-white/10 text-foreground"
                 >
-                  Contact Sales
+                  {t("cards.email.cta")}
                 </Button>
               </CardContent>
             </Card>
@@ -87,17 +80,14 @@ export function CTASection() {
             <Card className="bg-white/20 dark:bg-white/5 backdrop-blur-sm border-white/20 dark:border-white/10">
               <CardContent className="p-6 text-foreground text-center">
                 <Phone className="mx-auto mb-3 w-8 h-8 text-secondary" />
-                <h3 className="mb-2 font-semibold">Phone Consultation</h3>
-                <p className="mb-4 text-muted-foreground text-sm">
-                  Schedule a call to discuss your specific customer service
-                  needs
-                </p>
+                <h3 className="mb-2 font-semibold">{t("cards.phone.title")}</h3>
+                <p className="mb-4 text-muted-foreground text-sm">{t("cards.phone.desc")}</p>
                 <Button
                   variant="outline"
                   size="sm"
                   className="bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 border-white/30 dark:border-white/10 text-foreground"
                 >
-                  Book Call
+                  {t("cards.phone.cta")}
                 </Button>
               </CardContent>
             </Card>
