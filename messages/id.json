@@ -97,5 +97,47 @@
     "language": "Bahasa",
     "english": "Inggris",
     "indonesian": "Bahasa Indonesia"
+  },
+  "Dashboard": {
+    "heading": "Dasbor Kuat untuk Kendali Penuh",
+    "subheading": "Pantau percakapan, lacak performa, dan kelola seluruh operasi WhatsApp Anda dari satu dasbor yang intuitif.",
+    "stats": {
+      "title": "Statistik Hari Ini",
+      "messages": "Pesan",
+      "activeChats": "Obrolan Aktif",
+      "conversions": "Konversi",
+      "avgResponse": "Rata-rata Respons"
+    },
+    "segments": {
+      "title": "Segmen Kontak",
+      "hotLeads": "Prospek Panas",
+      "customers": "Pelanggan",
+      "prospects": "Prospek"
+    },
+    "conversations": {
+      "title": "Percakapan Terbaru",
+      "status": {
+        "active": "Aktif",
+        "followUp": "Tindak Lanjut",
+        "hotLead": "Prospek Panas"
+      },
+      "items": {
+        "one": {
+          "name": "John Doe",
+          "message": "Hai, saya tertarik dengan paket premium Anda...",
+          "time": "2 menit yang lalu"
+        },
+        "two": {
+          "name": "Sarah Miller",
+          "message": "Terima kasih atas respons cepatnya! Kapan kita bisa menjadwalkan panggilan?",
+          "time": "15 menit yang lalu"
+        },
+        "three": {
+          "name": "Mike Johnson",
+          "message": "Sempurna! Saya ambil paket tahunan. Bagaimana langkah selanjutnya?",
+          "time": "1 jam yang lalu"
+        }
+      }
+    }
   }
 }

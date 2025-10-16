@@ -1,3 +1,4 @@
+"use client";
 import {
   Card,
   CardContent,
@@ -23,19 +24,43 @@ export function FeaturesSection() {
       titleKey: "items.autoChat.title",
       descKey: "items.autoChat.desc",
     },
-    { icon: Clock, titleKey: "items.support.title", descKey: "items.support.desc" },
-    { icon: TrendingUp, titleKey: "items.followup.title", descKey: "items.followup.desc" },
-    { icon: Zap, titleKey: "items.instant.title", descKey: "items.instant.desc" },
-    { icon: Shield, titleKey: "items.secure.title", descKey: "items.secure.desc" },
-    { icon: BarChart3, titleKey: "items.analytics.title", descKey: "items.analytics.desc" },
+    {
+      icon: Clock,
+      titleKey: "items.support.title",
+      descKey: "items.support.desc",
+    },
+    {
+      icon: TrendingUp,
+      titleKey: "items.followup.title",
+      descKey: "items.followup.desc",
+    },
+    {
+      icon: Zap,
+      titleKey: "items.instant.title",
+      descKey: "items.instant.desc",
+    },
+    {
+      icon: Shield,
+      titleKey: "items.secure.title",
+      descKey: "items.secure.desc",
+    },
+    {
+      icon: BarChart3,
+      titleKey: "items.analytics.title",
+      descKey: "items.analytics.desc",
+    },
   ];
 
   return (
     <section id="features" className="bg-muted/30 dark:bg-muted/20 px-4 py-20">
       <div className="mx-auto max-w-6xl container">
         <div className="space-y-4 mb-16 text-center">
-          <h2 className="font-bold text-foreground text-3xl md:text-4xl">{t("heading")}</h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground text-lg">{t("subheading")}</p>
+          <h2 className="font-bold text-foreground text-3xl md:text-4xl">
+            {t("heading")}
+          </h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground text-lg">
+            {t("subheading")}
+          </p>
         </div>
 
         <div className="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

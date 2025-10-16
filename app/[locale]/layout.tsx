@@ -1,30 +1,33 @@
-import type {Metadata} from 'next';
-import {GeistSans} from 'geist/font/sans';
-import {GeistMono} from 'geist/font/mono';
-import {Analytics} from '@vercel/analytics/next';
-import {ThemeProvider} from '@/components/theme-provider';
-import {NextIntlClientProvider} from 'next-intl';
-import {notFound} from 'next/navigation';
-import {ReactNode} from 'react';
-import '../globals.css';
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import { NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { ReactNode } from "react";
+import "../globals.css";
 
 export const metadata: Metadata = {
-  title: 'Xendify — AI Customer Service Assistant',
+  title: "Xendify — AI Customer Service Assistant",
   description:
-    'Automate WhatsApp support with an AI assistant that manages chats, organizes contacts, and drives sales follow-ups — tailored for your business.',
-  generator: 'v0.app',
+    "Automate WhatsApp support with an AI assistant that manages chats, organizes contacts, and drives sales follow-ups — tailored for your business.",
+  generator: "v0.app",
   icons: {
-    icon: '/xendify-logo-white.png'
-  }
+    icon: "/xendify-logo-white.png",
+  },
 };
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: ReactNode;
-  params: {locale: string};
+  params: { locale: string };
 }>) {
+  // Inform next-intl about the current locale for static rendering
+  setRequestLocale(params.locale);
   let messages;
   try {
     messages = (await import(`../../messages/${params.locale}.json`)).default;
@@ -36,7 +39,12 @@ export default async function LocaleLayout({
     <html lang={params.locale} suppressHydrationWarning>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
             {children}
             <Analytics />
           </ThemeProvider>
@@ -44,4 +52,8 @@ export default async function LocaleLayout({
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "id" }];
 }

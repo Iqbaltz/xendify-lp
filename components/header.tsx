@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
@@ -25,7 +26,9 @@ export function Header() {
               className="w-6 h-6"
             />
           </div>
-          <span className="font-bold text-foreground text-xl">{t("brand")}</span>
+          <span className="font-bold text-foreground text-xl">
+            {t("brand")}
+          </span>
         </div>
 
         {/* Desktop Nav */}
@@ -33,13 +36,19 @@ export function Header() {
           <NavigationMenu viewport={false}>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#features">{t("nav.features")}</NavigationMenuLink>
+                <NavigationMenuLink href="#features">
+                  {t("nav.features")}
+                </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#dashboard">{t("nav.dashboard")}</NavigationMenuLink>
+                <NavigationMenuLink href="#dashboard">
+                  {t("nav.dashboard")}
+                </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#contact">{t("nav.contact")}</NavigationMenuLink>
+                <NavigationMenuLink href="#contact">
+                  {t("nav.contact")}
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

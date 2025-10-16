@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -30,7 +31,9 @@ export function CTASection() {
         {/* Glass panel */}
         <div className="bg-white/60 supports-[backdrop-filter]:bg-white/10 dark:bg-black/30 shadow-xl backdrop-blur-2xl mx-auto p-10 border border-white/30 dark:border-white/10 rounded-3xl ring-1 ring-black/5 dark:ring-white/10 max-w-4xl text-center">
           <div className="space-y-6">
-            <h2 className="font-bold text-foreground text-3xl md:text-4xl text-balance">{t("heading")}</h2>
+            <h2 className="font-bold text-foreground text-3xl md:text-4xl text-balance">
+              {t("heading")}
+            </h2>
             <div className="flex justify-center items-center">
               <Badge
                 variant="secondary"
@@ -39,7 +42,9 @@ export function CTASection() {
                 {t("badge")}
               </Badge>
             </div>
-            <p className="mx-auto max-w-2xl text-muted-foreground text-lg text-pretty">{t("desc")}</p>
+            <p className="mx-auto max-w-2xl text-muted-foreground text-lg text-pretty">
+              {t("desc")}
+            </p>
 
             <div className="flex sm:flex-row flex-col justify-center gap-4 pt-4">
               <Button
@@ -66,7 +71,9 @@ export function CTASection() {
               <CardContent className="p-6 text-foreground text-center">
                 <Mail className="mx-auto mb-3 w-8 h-8 text-secondary" />
                 <h3 className="mb-2 font-semibold">{t("cards.email.title")}</h3>
-                <p className="mb-4 text-muted-foreground text-sm">{t("cards.email.desc")}</p>
+                <p className="mb-4 text-muted-foreground text-sm">
+                  {t("cards.email.desc")}
+                </p>
                 <Button
                   variant="outline"
                   size="sm"
@@ -81,7 +88,9 @@ export function CTASection() {
               <CardContent className="p-6 text-foreground text-center">
                 <Phone className="mx-auto mb-3 w-8 h-8 text-secondary" />
                 <h3 className="mb-2 font-semibold">{t("cards.phone.title")}</h3>
-                <p className="mb-4 text-muted-foreground text-sm">{t("cards.phone.desc")}</p>
+                <p className="mb-4 text-muted-foreground text-sm">
+                  {t("cards.phone.desc")}
+                </p>
                 <Button
                   variant="outline"
                   size="sm"

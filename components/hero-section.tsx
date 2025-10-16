@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, MessageSquare, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -42,24 +43,36 @@ export function HeroSection() {
               <div className="bg-secondary/10 p-3 rounded-full">
                 <Bot className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="font-semibold text-foreground">{t("features.aiTitle")}</h3>
-              <p className="text-muted-foreground text-sm text-center">{t("features.aiDesc")}</p>
+              <h3 className="font-semibold text-foreground">
+                {t("features.aiTitle")}
+              </h3>
+              <p className="text-muted-foreground text-sm text-center">
+                {t("features.aiDesc")}
+              </p>
             </div>
 
             <div className="flex flex-col items-center space-y-3">
               <div className="bg-secondary/10 p-3 rounded-full">
                 <MessageSquare className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="font-semibold text-foreground">{t("features.chatTitle")}</h3>
-              <p className="text-muted-foreground text-sm text-center">{t("features.chatDesc")}</p>
+              <h3 className="font-semibold text-foreground">
+                {t("features.chatTitle")}
+              </h3>
+              <p className="text-muted-foreground text-sm text-center">
+                {t("features.chatDesc")}
+              </p>
             </div>
 
             <div className="flex flex-col items-center space-y-3">
               <div className="bg-secondary/10 p-3 rounded-full">
                 <Users className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="font-semibold text-foreground">{t("features.contactTitle")}</h3>
-              <p className="text-muted-foreground text-sm text-center">{t("features.contactDesc")}</p>
+              <h3 className="font-semibold text-foreground">
+                {t("features.contactTitle")}
+              </h3>
+              <p className="text-muted-foreground text-sm text-center">
+                {t("features.contactDesc")}
+              </p>
             </div>
           </div>
         </div>

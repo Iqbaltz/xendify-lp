@@ -1,14 +1,14 @@
-import {getRequestConfig} from 'next-intl/server';
+import { getRequestConfig } from "next-intl/server";
 
-export default getRequestConfig(async ({locale}) => {
-  // Ensure that only the locales that we support are accepted
-  if (!['en', 'id'].includes(locale)) {
+export default getRequestConfig(async ({ locale }) => {
+  // Fallback to English if the locale isn't supported
+  if (!["en", "id"].includes(locale)) {
     return {
-      messages: (await import('../messages/en.json')).default
+      messages: (await import("../messages/en.json")).default,
     };
   }
 
   return {
-    messages: (await import(`../messages/${locale}.json`)).default
+    messages: (await import(`../messages/${locale}.json`)).default,
   };
 });

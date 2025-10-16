@@ -1,53 +1,59 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { MessageCircle, Users, TrendingUp, Clock } from "lucide-react"
+"use client";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { MessageCircle, Users, TrendingUp, Clock } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function DashboardPreview() {
+  const t = useTranslations("Dashboard");
   return (
-    <section id="dashboard" className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Powerful Dashboard for Complete Control</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Monitor conversations, track performance, and manage your entire WhatsApp operation from one intuitive
-            dashboard.
+    <section id="dashboard" className="px-4 py-20">
+      <div className="mx-auto max-w-6xl container">
+        <div className="space-y-4 mb-16 text-center">
+          <h2 className="font-bold text-foreground text-3xl md:text-4xl">
+            {t("heading")}
+          </h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground text-lg">
+            {t("subheading")}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="gap-6 grid grid-cols-1 lg:grid-cols-3">
           {/* Stats Overview */}
-          <div className="lg:col-span-1 space-y-4">
+          <div className="space-y-4 lg:col-span-1">
             <Card>
               <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Today's Stats</CardTitle>
+                <CardTitle className="font-medium text-muted-foreground text-sm">
+                  {t("stats.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-2">
-                    <MessageCircle className="h-4 w-4 text-secondary" />
-                    <span className="text-sm">Messages</span>
+                    <MessageCircle className="w-4 h-4 text-secondary" />
+                    <span className="text-sm">{t("stats.messages")}</span>
                   </div>
                   <span className="font-semibold">247</span>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-2">
-                    <Users className="h-4 w-4 text-secondary" />
-                    <span className="text-sm">Active Chats</span>
+                    <Users className="w-4 h-4 text-secondary" />
+                    <span className="text-sm">{t("stats.activeChats")}</span>
                   </div>
                   <span className="font-semibold">18</span>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-2">
-                    <TrendingUp className="h-4 w-4 text-secondary" />
-                    <span className="text-sm">Conversions</span>
+                    <TrendingUp className="w-4 h-4 text-secondary" />
+                    <span className="text-sm">{t("stats.conversions")}</span>
                   </div>
                   <span className="font-semibold">12</span>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-2">
-                    <Clock className="h-4 w-4 text-secondary" />
-                    <span className="text-sm">Avg Response</span>
+                    <Clock className="w-4 h-4 text-secondary" />
+                    <span className="text-sm">{t("stats.avgResponse")}</span>
                   </div>
                   <span className="font-semibold">2.3s</span>
                 </div>
@@ -56,20 +62,22 @@ export function DashboardPreview() {
 
             <Card>
               <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Contact Segments</CardTitle>
+                <CardTitle className="font-medium text-muted-foreground text-sm">
+                  {t("segments.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <Badge variant="secondary">Hot Leads</Badge>
-                  <span className="text-sm font-medium">23</span>
+                <div className="flex justify-between items-center">
+                  <Badge variant="secondary">{t("segments.hotLeads")}</Badge>
+                  <span className="font-medium text-sm">23</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <Badge variant="outline">Customers</Badge>
-                  <span className="text-sm font-medium">156</span>
+                <div className="flex justify-between items-center">
+                  <Badge variant="outline">{t("segments.customers")}</Badge>
+                  <span className="font-medium text-sm">156</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <Badge variant="outline">Prospects</Badge>
-                  <span className="text-sm font-medium">89</span>
+                <div className="flex justify-between items-center">
+                  <Badge variant="outline">{t("segments.prospects")}</Badge>
+                  <span className="font-medium text-sm">89</span>
                 </div>
               </CardContent>
             </Card>
@@ -78,57 +86,75 @@ export function DashboardPreview() {
           {/* Chat Preview */}
           <Card className="lg:col-span-2">
             <CardHeader>
-              <CardTitle className="text-sm font-medium text-muted-foreground">Recent Conversations</CardTitle>
+              <CardTitle className="font-medium text-muted-foreground text-sm">
+                {t("conversations.title")}
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-3">
-                <div className="flex items-start space-x-3 p-3 rounded-lg bg-muted/50">
-                  <Avatar className="h-8 w-8">
+                <div className="flex items-start space-x-3 bg-muted/50 p-3 rounded-lg">
+                  <Avatar className="w-8 h-8">
                     <AvatarFallback>JD</AvatarFallback>
                   </Avatar>
                   <div className="flex-1 space-y-1">
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm font-medium">John Doe</p>
-                      <Badge className="bg-green-100 text-green-800 text-xs">Active</Badge>
+                    <div className="flex justify-between items-center">
+                      <p className="font-medium text-sm">
+                        {t("conversations.items.one.name")}
+                      </p>
+                      <Badge className="bg-green-100 text-green-800 text-xs">
+                        {t("conversations.status.active")}
+                      </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">Hi, I'm interested in your premium package...</p>
-                    <p className="text-xs text-muted-foreground">2 minutes ago</p>
+                    <p className="text-muted-foreground text-sm">
+                      {t("conversations.items.one.message")}
+                    </p>
+                    <p className="text-muted-foreground text-xs">
+                      {t("conversations.items.one.time")}
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3 p-3 rounded-lg bg-muted/50">
-                  <Avatar className="h-8 w-8">
+                <div className="flex items-start space-x-3 bg-muted/50 p-3 rounded-lg">
+                  <Avatar className="w-8 h-8">
                     <AvatarFallback>SM</AvatarFallback>
                   </Avatar>
                   <div className="flex-1 space-y-1">
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm font-medium">Sarah Miller</p>
+                    <div className="flex justify-between items-center">
+                      <p className="font-medium text-sm">
+                        {t("conversations.items.two.name")}
+                      </p>
                       <Badge variant="outline" className="text-xs">
-                        Follow-up
+                        {t("conversations.status.followUp")}
                       </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      Thanks for the quick response! When can we schedule a call?
+                    <p className="text-muted-foreground text-sm">
+                      {t("conversations.items.two.message")}
                     </p>
-                    <p className="text-xs text-muted-foreground">15 minutes ago</p>
+                    <p className="text-muted-foreground text-xs">
+                      {t("conversations.items.two.time")}
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3 p-3 rounded-lg bg-muted/50">
-                  <Avatar className="h-8 w-8">
+                <div className="flex items-start space-x-3 bg-muted/50 p-3 rounded-lg">
+                  <Avatar className="w-8 h-8">
                     <AvatarFallback>MJ</AvatarFallback>
                   </Avatar>
                   <div className="flex-1 space-y-1">
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm font-medium">Mike Johnson</p>
+                    <div className="flex justify-between items-center">
+                      <p className="font-medium text-sm">
+                        {t("conversations.items.three.name")}
+                      </p>
                       <Badge variant="secondary" className="text-xs">
-                        Hot Lead
+                        {t("conversations.status.hotLead")}
                       </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      Perfect! I'll take the annual plan. How do we proceed?
+                    <p className="text-muted-foreground text-sm">
+                      {t("conversations.items.three.message")}
                     </p>
-                    <p className="text-xs text-muted-foreground">1 hour ago</p>
+                    <p className="text-muted-foreground text-xs">
+                      {t("conversations.items.three.time")}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -137,5 +163,5 @@ export function DashboardPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }

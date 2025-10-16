@@ -72,6 +72,7 @@ pnpm start
 ## Deployment
 
 Optimized for Vercel (includes `@vercel/analytics`). Any platform supporting Node.js can run it via `pnpm build && pnpm start`.
+
 # xendify-lp
 
 ## Localization (next-intl)
@@ -90,11 +91,11 @@ Using translations in a component:
 2. In the component:
 
 ```tsx
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export function Example() {
-  const t = useTranslations('Namespace');
-  return <h1>{t('key')}</h1>;
+  const t = useTranslations("Namespace");
+  return <h1>{t("key")}</h1>;
 }
 ```
 
