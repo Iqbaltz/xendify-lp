@@ -1,0 +1,2 @@
+/* Delegate to the App Router global stylesheet */
+@import '../app/globals.css';
